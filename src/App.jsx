@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Menu/Header";
 import Menu from "./components/Menu/Menu";
 import Hero from "./components/Hero/Hero";
@@ -6,21 +7,26 @@ import Subscribe from "./components/Subscribe/Subscribe";
 import Footer from "./components/Footer/Footer";
 import PostItem from "./components/posts/PostItem";
 import TagList from "./components/posts/TagList";
+import PostDetail from "./components/posts/PostDetail";
 import { getPexelsImages } from "./utils/getPexelsImages";
 
 const initialPosts = [
   {
+    id: 1,
     title: "Sample Post 1",
     url: "/post/1",
     description: "This is a sample post description for post 1.",
+    content: "Full content for post 1.",
     pubDate: "2023-03-16",
     author: "John Doe",
     tags: ["HTML", "CSS"],
   },
   {
+    id: 2,
     title: "Sample Post 2",
     url: "/post/2",
     description: "This is a sample post description for post 2.",
+    content: "Full content for post 2.",
     pubDate: "2023-03-17",
     author: "Jane Smith",
     tags: ["REACT", "TAILWINDCSS"],
@@ -66,10 +72,10 @@ function App() {
 
   useEffect(() => {
     const fetchImages = async () => {
-      const images = await getPexelsImages("nature"); // Cambia 'nature' a la categoría que prefieras
+      const images = await getPexelsImages("nature");
       const updatedPosts = initialPosts.map((post, index) => ({
         ...post,
-        image: images[index % images.length], // Asegurarse de que siempre haya una imagen disponible
+        image: images[index % images.length],
       }));
       setPosts(updatedPosts);
     };
@@ -95,14 +101,22 @@ function App() {
       <Header toggleMenu={toggleMenu} isMenuOpen={menuOpen} />
       <Menu isOpen={menuOpen} />
       <Hero />
-      <div className="container mx-auto px-4 py-8">
-        <TagList tags={allTags} onTagClick={handleTagClick} />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {filteredPosts.map((post, index) => (
-            <PostItem key={index} {...post} />
-          ))}
-        </div>
-      </div>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div className="container mx-auto px-4 py-8">
+              <TagList tags={allTags} onTagClick={handleTagClick} />
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                {filteredPosts.map((post) => (
+                  <PostItem key={post.id} {...post} />
+                ))}
+              </div>
+            </div>
+          }
+        />
+        <Route path="/post/:id" element={<PostDetail posts={posts} />} />
+      </Routes>
       <Subscribe />
       <Footer />
     </div>

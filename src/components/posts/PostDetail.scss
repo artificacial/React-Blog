@@ -1,0 +1,53 @@
+// src/components/posts/PostDetail.scss
+.post-detail {
+  .post-image {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .post-title {
+    color: #333;
+  }
+
+  .post-author {
+    color: #555;
+  }
+
+  .post-date {
+    color: #888;
+  }
+
+  .post-content {
+    color: #444;
+  }
+
+  .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    .tag {
+      background-color: #e5e7eb; // Tailwind CSS gray-200
+      color: #1f2937; // Tailwind CSS gray-800
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #d1d5db; // Tailwind CSS gray-300
+      }
+    }
+  }
+
+  .back-button {
+    background-color: #e5e7eb; // Tailwind CSS gray-200
+    color: #1f2937; // Tailwind CSS gray-800
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    &:hover {
+      background-color: #d1d5db; // Tailwind CSS gray-300
+    }
+  }
+}
