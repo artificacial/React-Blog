@@ -1,0 +1,21 @@
+// src/components/posts/TagList.scss
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.tag {
+  background-color: #e5e7eb; // Tailwind CSS gray-200
+  color: #1f2937; // Tailwind CSS gray-800
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #d1d5db; // Tailwind CSS gray-300
+  }
+}

@@ -1,0 +1,19 @@
+footer {
+  .footer-section {
+    h2 {
+      @apply inline-block text-2xl pb-4 mb-4 border-b-4 border-emerald-600;
+    }
+
+    p {
+      @apply text-justify;
+    }
+
+    .social-icons {
+      @apply flex;
+
+      .social-icon {
+        @apply inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-3 hover:text-emerald-400 hover:border-emerald-400;
+      }
+    }
+  }
+}

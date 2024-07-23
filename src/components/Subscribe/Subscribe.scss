@@ -1,0 +1,33 @@
+.subscribe-section {
+  .container {
+    @apply mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32;
+  }
+
+  .subscribe-box {
+    @apply bg-teal-800 p-8 text-center sm:p-10 md:p-16;
+  }
+
+  .title {
+    @apply mb-4 text-3xl font-bold md:text-5xl;
+  }
+
+  .description {
+    @apply mx-auto mb-6 max-w-2xl text-gray-400 md:mb-10;
+  }
+
+  .form {
+    @apply relative mx-auto mb-4 flex w-full max-w-2xl flex-col items-start justify-center sm:flex-row;
+  }
+
+  .input-email {
+    @apply mb-3 mr-6 block h-9 w-full bg-white px-6 py-7 text-sm text-[#333333] focus:border-emerald-600;
+  }
+
+  .submit-btn {
+    @apply inline-block w-full cursor-pointer bg-emerald-400 px-6 py-3 text-center font-semibold text-white transition sm:w-28;
+    box-shadow: rgb(25, 124, 93) -8px 8px;
+    &:hover {
+      box-shadow: rgb(25, 124, 93) 0px 0px;
+    }
+  }
+}
