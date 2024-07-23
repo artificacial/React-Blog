@@ -32,6 +32,7 @@ const initialPosts = [
     tags: ["REACT", "TAILWINDCSS"],
   },
   {
+    id: 3,
     title: "Sample Post 3",
     url: "/post/3",
     description: "This is a sample post description for post 3.",
@@ -40,6 +41,7 @@ const initialPosts = [
     tags: ["HTML", "TAILWINDCSS"],
   },
   {
+    id: 4,
     title: "Sample Post 4",
     url: "/post/4",
     description: "This is a sample post description for post 4.",
@@ -48,6 +50,7 @@ const initialPosts = [
     tags: ["REACT", "FLEXBOX"],
   },
   {
+    id: 5,
     title: "Sample Post 5",
     url: "/post/5",
     description: "This is a sample post description for post 5.",
@@ -56,6 +59,7 @@ const initialPosts = [
     tags: ["HTML", "FLEXBOX"],
   },
   {
+    id: 6,
     title: "Sample Post 6",
     url: "/post/6",
     description: "This is a sample post description for post 6.",
