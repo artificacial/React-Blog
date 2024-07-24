@@ -1,4 +1,3 @@
-// src/utils/getPexelsImages.js
 import axios from "axios";
 
 const PEXELS_API_KEY =

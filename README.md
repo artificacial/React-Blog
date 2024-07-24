@@ -2,6 +2,8 @@
 
 Este proyecto es una aplicación de blog construida con Vite.js, React y Tailwind CSS. La aplicación permite visualizar una lista de posts, filtrarlos por etiquetas, y ver el contenido completo de cada post en una página dedicada. Los posts están escritos en formato Markdown y se cargan dinámicamente desde archivos locales.
 
+![ScreenCapture]()
+
 ## Características
 
 - **Lista de Posts**: Muestra una lista de posts en un formato de cuadrícula.
